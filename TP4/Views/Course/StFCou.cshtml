@@ -1,0 +1,28 @@
+﻿@model IEnumerable<TP4.Models.Student>
+@{
+    ViewData["Title"] = "Home Page";
+}
+
+<div class="text-center">
+    <h1 class="display-4">Students who are enrolled in course @ViewData["course"] Course</h1>
+    <div class="container">
+        <div class="row g-3">
+            @foreach (var st in Model)
+            {
+                <div class="col-sm-3">
+                    <div class="d-flex align-items-center justify-content-center flex-column p-2 border border-secondary rounded" style="min-height:200px">
+                        <span>Id : @st.id</span>
+                        <span>First Name: @st.first_name</span>
+                        <span>Last Name: @st.last_name</span>
+                        <span>Phone Number: @st.phone_number</span>
+                        <span>Course: @st.course</span>
+                        <span>University: @st.university</span>
+                        <span>Timestamp : @st.timestamp</span>
+                    </div>
+                </div>
+            }
+        </div>
+    </div>
+
+</div>
+
